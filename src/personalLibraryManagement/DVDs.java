@@ -4,25 +4,27 @@
 package personalLibraryManagement;
 
 /**
+ * This is the subclass DVDs extends publiation abstract class.
  * @author Xiaoyu
  *
  */
 public class DVDs extends Publications{
-	public int timeInMin;
-	public int numberOfDVDs;
-	public String cast;
+	public int timeInMin;//how long for this DVDs to play
+	public int numberOfDVDs;//how many discs
+	public String cast;//cast name in string
 	
 	/**
-	 * @param name
-	 * @param ISBN
-	 * @param publisher
-	 * @param publicationYear
-	 * @param purchasedYear
-	 * @param contentType
-	 * @param locationOnShelf
-	 * @param timeInMin
-	 * @param numberOfDVDs
-	 * @param cast
+	 * This is the constructor.
+	 * @param name title of this publication in string
+	 * @param ASIN ASIN for books and ASIN for CDs and DVDs in string in string
+     * @param publisher publisher in string
+	 * @param publicationYear four digits year, e.g. 2017
+	 * @param purchasedYear four digits year, e.g. 2017
+	 * @param contentType type or style of the content
+	 * @param locationOnShelf where is located in string, e.g. 1A for book, 1B for CDs, 1C for DVDs
+	 * @param timeInMin how long for this CDs to play in minutes
+	 * @param numberOfDVDs how many discs
+	 * @param cast players name in string
 	 */
 	public DVDs(String name, String ASIN, String publisher, int publicationYear, int purchasedYear, String contentType,
 			String locationOnShelf, int timeInMin, int numberOfDVDs, String cast) {
@@ -46,5 +48,6 @@ public class DVDs extends Publications{
 				+ (contentType != null ? "contentType is: " + contentType + ", " : "")
 				+ (locationOnShelf != null ? "locationOnShelf is: " + locationOnShelf + ", " : "") + "whether be deleted? "
 				+ isDeleted + ", whether be borrowed? " + isBorrowed + ".";
-	}
+	}//end toString
 }
+//end DVDs
