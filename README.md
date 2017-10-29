@@ -1,5 +1,4 @@
 # CIS152-Publication Database Management System
-# CIS152-Publication Database Management System
 Publication Database Management System (a proposal of the final project for CIS 152: data structures)
 By Xiaoyu Xing
 Introduction: 
