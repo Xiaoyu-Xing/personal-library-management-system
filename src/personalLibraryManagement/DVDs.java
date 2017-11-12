@@ -28,10 +28,10 @@ public class DVDs extends Publications{
 	 */
 	public DVDs(String name, String ASIN, String publisher, int publicationYear, int purchasedYear, String contentType,
 			String locationOnShelf, int timeInMin, int numberOfDVDs, String cast) {
-		super(name, ASIN, publisher, publicationYear, purchasedYear, contentType, locationOnShelf);
+		super(name, cast, ASIN, publisher, publicationYear, purchasedYear, contentType, locationOnShelf);
 		this.timeInMin = timeInMin;
 		this.numberOfDVDs = numberOfDVDs;
-		this.cast = cast;
+		this.cast = super.author;
 	}
 
 	/* (non-Javadoc)
@@ -46,8 +46,7 @@ public class DVDs extends Publications{
 				+ (publisher != null ? "publisher is: " + publisher + ", " : "") + "publicationYear is: " + publicationYear
 				+ ", purchasedYear is: " + purchasedYear + ", "
 				+ (contentType != null ? "contentType is: " + contentType + ", " : "")
-				+ (locationOnShelf != null ? "locationOnShelf is: " + locationOnShelf + ", " : "") + "whether be deleted? "
-				+ isDeleted + ", whether be borrowed? " + isBorrowed + ".";
+				+ (locationOnShelf != null ? "locationOnShelf is: " + locationOnShelf + ", " : "") + ", whether be borrowed? " + isBorrowed + ".\n";
 	}//end toString
 }
 //end DVDs

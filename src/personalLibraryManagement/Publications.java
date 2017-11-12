@@ -10,6 +10,7 @@ package personalLibraryManagement;
  */
 public abstract class Publications {
 	public String uniqueCode;//ISBN for books, ASIN for CDs and DVDs
+	public String author;
 	public String name;//publication name
 	public int numberOfPossession;//how many number he/she has
 	public String publisher;//publisher
@@ -17,7 +18,6 @@ public abstract class Publications {
 	public int purchasedYear;
 	public String contentType;
 	public String locationOnShelf;//where it located
-	public boolean isDeleted;//whether be deleted
 	public boolean isBorrowed;//whether be borrowed
 	/**
 	 * This is the constructor for publication.
@@ -31,9 +31,10 @@ public abstract class Publications {
 	 * @param isDeleted whether deleted
 	 * @param isBorrowed whether be borrowed
 	 */
-	public Publications(String name, String uniqueCode, String publisher, int publicationYear,
+	public Publications(String name, String author, String uniqueCode, String publisher, int publicationYear,
 			int purchasedYear, String contentType, String locationOnShelf) {
 		super();
+		this.author = author;
 		numberOfPossession = 1;
 		this.uniqueCode = uniqueCode;
 		this.name = name;
@@ -42,8 +43,8 @@ public abstract class Publications {
 		this.purchasedYear = purchasedYear;
 		this.contentType = contentType;
 		this.locationOnShelf = locationOnShelf;
-		this.isDeleted = false;//default is false when just input to this database
 		this.isBorrowed = false;//default is false when just input to this database
 	}//end constructor
-	
+
+	 
 }//end publications abstract class

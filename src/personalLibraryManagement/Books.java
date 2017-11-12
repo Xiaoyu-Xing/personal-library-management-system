@@ -27,9 +27,9 @@ public class Books extends Publications {
 	 */
 	public Books(String name, String ISBN, String publisher, int publicationYear, int purchasedYear, String contentType,
 			String locationOnShelf, int pages, String author) {
-		super(name, ISBN, publisher, publicationYear, purchasedYear, contentType, locationOnShelf);//use super class's constructor
+		super(name, author, ISBN, publisher, publicationYear, purchasedYear, contentType, locationOnShelf);//use super class's constructor
 		this.pages = pages;
-		this.author = author;
+		this.author = super.author;
 	}
 
 	/* (non-Javadoc)
@@ -43,8 +43,7 @@ public class Books extends Publications {
 				+ (publisher != null ? "publisher is: " + publisher + ", " : "") + "publicationYear is: " + publicationYear
 				+ ", purchasedYear is: " + purchasedYear + ", "
 				+ (contentType != null ? "contentType is: " + contentType + ", " : "")
-				+ (locationOnShelf != null ? "locationOnShelf is: " + locationOnShelf + ", " : "") + "whether be deleted? "
-				+ isDeleted + ", whether be borrowed? " + isBorrowed + ".";
+				+ (locationOnShelf != null ? "locationOnShelf is: " + locationOnShelf + ", " : "") + ", whether be borrowed? " + isBorrowed + ".\n";
 	}//end toString
 	
 }//end books
