@@ -65,10 +65,38 @@ public class ManagementTesterXing {
 		myLibrary.borrowByCode("B01MAZGLMP");//test for borrow method
 		System.out.println(moana);//check the isBorrowed field changed to true.
 		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
-		myLibrary.deleteByCode("9780672324536");//delete one entry
-		myLibrary.deleteByCode("B0714QRG4Z");//delete one entry
-		myLibrary.traverse("Preorder");//see the preorder traversal
+		//Below was commented for testing of BorrowTracking system to have whole list of publications to use.
+//		myLibrary.deleteByCode("9780672324536");//delete one entry
+//		myLibrary.deleteByCode("B0714QRG4Z");//delete one entry
+//		myLibrary.traverse("Preorder");//see the preorder traversal
+//		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
+		//Below for testing BorrowTracking system, and bubble sorting by name of the borrowing system
+		BorrowTracking theBorrowedList = new BorrowTracking(myLibrary);// make new borrowTracking system
+		theBorrowedList.anyBeBorrowed(); //anything be borrowed? 0
+		theBorrowedList.borrow("Alex", "9780672324536"); //someone borrowed something
+		theBorrowedList.borrow("Bob", "9780321573513");//someone borrowed something
+		theBorrowedList.borrow("Dave", "B01LZHMGL4");//someone borrowed something
+		theBorrowedList.borrow("Cathelina", "B01N5OKNQM");//someone borrowed something
+		theBorrowedList.borrow("Fury", "B01MAZGLMP");//someone borrowed something
+		theBorrowedList.borrow("Emma", "B0714QRG4Z");//someone borrowed something
+		theBorrowedList.howManyBeBorrowed(); //how many be borrowed
+		theBorrowedList.anyBeBorrowed();//anything be borrowed? 6
+		theBorrowedList.displayBorrowedList();//display list
+		theBorrowedList.sort();//bubble sort as alphabetical order of borrowers' name
 		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
+		theBorrowedList.displayBorrowedList();//display list
+		theBorrowedList.returned("9780672324536");//something was returned
+		theBorrowedList.returned("9780321573513");//something was returned
+		theBorrowedList.returned("B01LZHMGL4");//something was returned
+		theBorrowedList.returned("B01N5OKNQM");//something was returned
+		theBorrowedList.returned("B01MAZGLMP");//something was returned
+		theBorrowedList.returned("B0714QRG4Z");//something was returned
+		theBorrowedList.howManyBeBorrowed();//how many be borrowed
+		theBorrowedList.anyBeBorrowed();//anything be borrowed? 0
+		
+		
+		
+		
 		
 		
 	}
