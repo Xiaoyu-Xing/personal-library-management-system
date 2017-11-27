@@ -93,12 +93,29 @@ public class ManagementTesterXing {
 		theBorrowedList.returned("B0714QRG4Z");//something was returned
 		theBorrowedList.howManyBeBorrowed();//how many be borrowed
 		theBorrowedList.anyBeBorrowed();//anything be borrowed? 0
-		
-		
-		
-		
-		
-		
+		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
+		Books ochem = new Books("Organic Chemistry",  "9781118452288", "Wiley", 2013, 2014, "Chemistry", "5A", 1344, "David Klein");
+		Books pchem = new Books("Physical Chemistry: Thermodynamics, Structure, and Change",  "9781429290197", "W. H. Freeman", 2014, 2016, "Chemistry", "5A", 1060, "Peter Atkins");
+		Books achem = new Books("Analytical Chemistry: A Chemist and Laboratory Technician's Toolkit",  "9781118714843", "Wiley", 2015, 2015, "Chemistry", "5A", 680, "Bryan Ham");
+		//insert all publications into tree
+		myLibrary.insert(ochem);
+		myLibrary.insert(pchem);
+		myLibrary.insert(achem);
+		myLibrary.size();//get size
+		myLibrary.traverse("Preorder");//preorder traversal
+		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
+		System.out.println(ochem);
+		theBorrowedList.borrow("Peter", "9781118452288"); //someone borrowed ochem
+		System.out.println(ochem);
+		theBorrowedList.returned("9781118452288");//ochem was returned
+		System.out.println(ochem);
+		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
+		theBorrowedList.borrow("Peter", "9781118452288"); //someone borrowed ochem
+		theBorrowedList.borrow("Adam", "9781429290197"); //someone borrowed pchem
+		theBorrowedList.borrow("KK", "9781118714843"); //someone borrowed achem
+		theBorrowedList.displayBorrowedList();//display list
+		theBorrowedList.sort();//bubble sort as alphabetical order of borrowers' name
+		theBorrowedList.displayBorrowedList();//display list
 	}
 
 }
