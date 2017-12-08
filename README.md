@@ -6,7 +6,7 @@ In this big data age, the amount of data generated everyday are growing rapidly.
 Solution:
 For this project, two data structures and one sorting method will be used. A detailed mapping of design is showed below (Figure 1). (The design is not final, necessary modification may be carried out.) For publication database, a superclass of publications and several subclasses, which extend from the superclass, will be build. Then followed by the binary search tree, which includes node and the tree class, to store publications by ISBN as the key. Several necessary methods are included, e.g. insert, search by fields, isDelete, and isBorrow etc. The Borrow Tracking system will keep a record of who borrowed what at when, which implemented by a linked list, which is composed the link and list. Several necessary methods are included. More importantly, by insertion sort, the borrowed books can be sorted by borrowers’ name. Then the driver serves for the testing of each part and as a complete program.
 
-![Project outline shown below.](https://github.com/xxingDMACC/CIS152-Publication-Database-Management-System/blob/Outline/Outline.png)
+![Project outline shown below.](https://github.com/xxingDMACC/CIS152-Publication-Database-Management-System/blob/Outline/Final.png)
 
 Timeline:
 This project can be divided into four sections to finish based on workload. 
