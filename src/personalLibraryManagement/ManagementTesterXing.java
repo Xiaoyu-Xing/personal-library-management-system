@@ -116,6 +116,14 @@ public class ManagementTesterXing {
 		theBorrowedList.displayBorrowedList();//display list
 		theBorrowedList.sort();//bubble sort as alphabetical order of borrowers' name
 		theBorrowedList.displayBorrowedList();//display list
+		System.out.println("--------------------------------------Seperate Line for Better Display---------------------------------------------");
+		Books hotShoeDiaries = new Books("The Hot Shoe Diaries: Big Light from Small Flashes",  " 9780321580146", "New Riders", 2009, 2017, "Photography", "6A", 320, "Joe McNally");
+		Books momentClicks = new Books("The Moment It Clicks: Photography Secrets from One of the World's Top Shooters",  " 9780321544087", "New Riders", 2008, 2017, "Photography", "6A", 256, "Joe McNally");
+		Books sketchingLight = new Books("Sketching Light: An Illustrated Tour of the Possibilities of Flash",  "9780321700902", "New Riders", 2011, 2017, "Chemistry", "6A", 432, "Joe McNally");
+		myLibrary.insert(hotShoeDiaries); //insert new books into library
+		myLibrary.insert(momentClicks);//insert new books into library
+		myLibrary.insert(sketchingLight);//insert new books into library
+		myLibrary.traverse("Preorder");//preorder traversal
 	}
 
 }
